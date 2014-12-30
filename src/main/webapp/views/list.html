@@ -1,0 +1,13 @@
+	<h2>Incidents</h2>
+	<div>
+		<label for="search">Search:</label>
+		<input type="search" ng-model="search">
+	</div>
+
+	<ul>
+		<li ng-repeat="incident in incidents | filter:search">
+			{{incident.customerId}} {{incident.formattedAddress}} {{incident.creationTs | date:'yyyy-MM-dd'}}
+		</li>
+	</ul>
+	
+	

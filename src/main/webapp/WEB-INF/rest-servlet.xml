@@ -21,7 +21,7 @@
      </bean>
 
      <bean id="geoApiContext" class="com.google.maps.GeoApiContext">
-        <property name="apiKey" value="xxx"/>
+        <property name="apiKey" value="AIzaSyCrU1j1-tmeSNQrD2DgxSI5v5Tp-Imzd6c"/>
      </bean>
 	
      <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">

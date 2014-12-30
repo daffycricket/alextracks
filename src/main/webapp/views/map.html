@@ -1,0 +1,17 @@
+<span ng-if="map !== undefined">
+	<google-map 
+		center="map.center" 
+		zoom="map.zoom"
+		draggable="true">
+		
+		
+		<marker ng-repeat="m in map.incidents" coords="m">
+			<window isIconVisibleOnClick="true">
+				<p ng-cloak>{{m.customerId}} declared incident on {{m.creationTs | date:'yyyy-MM-dd'}}</p>
+				<p ng-cloak>{{m.formattedAddress}}</p>
+			</window>
+		</marker>
+		
+	</google-map>
+	
+</span>
