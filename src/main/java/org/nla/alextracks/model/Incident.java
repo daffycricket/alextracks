@@ -10,15 +10,7 @@ public class Incident {
 
 	private String customerAddress;
 
-	private String correctedAddress;
-
-	public String getCorrectedAddress() {
-		return correctedAddress;
-	}
-
-	public void setCorrectedAddress(String correctedAddress) {
-		this.correctedAddress = correctedAddress;
-	}
+	private String formattedAddress;
 
 	private GeoPoint location;
 
@@ -64,10 +56,19 @@ public class Incident {
 		this.creationTs = creationTs;
 	}
 
+	public String getFormattedAddress() {
+		return formattedAddress;
+	}
+
+	public void setFormattedAddress(String formattedAddress) {
+		this.formattedAddress = formattedAddress;
+	}
+
 	@Override
 	public String toString() {
 		return "Incident [id=" + id + ", customerId=" + customerId
-				+ ", customerAddress=" + customerAddress + ", location="
+				+ ", customerAddress=" + customerAddress
+				+ ", formattedAddress=" + formattedAddress + ", location="
 				+ location + ", creationTs=" + creationTs + "]";
 	}
 }
